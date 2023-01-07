@@ -6,4 +6,4 @@ const stream = pretty({
 
 const logger = pino(stream);
 
-module.exports.logger = logger;
+export {logger}
