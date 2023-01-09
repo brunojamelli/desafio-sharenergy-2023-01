@@ -2,16 +2,19 @@ import { logger } from '../logger';
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
+function generateAccessToken(user: String) {
+    // expires after twenty minutes (1200 seconds = 20 minutes)
+    return jwt.sign({ user }, process.env.SECRET || '', { expiresIn: 1200 });
+}
+
 export default {
     async login(req: Request, res: Response) {
+        let username = req.body.username;
         if (req.body.username === 'desafiosharenergy' && req.body.password === 'sh@r3n3rgy') {
-            // If the username and password are correct, generate a JWT
-            const token = jwt.sign({
-                user: 'desafiosharenergy'
-            }, process.env.SECRET || "secret");
-
+            let token = generateAccessToken(username);
             // Return the JWT to the client
-            res.json({
+            logger.info('login');
+            res.status(201).json({
                 token
             });
         } else {

@@ -1,11 +1,11 @@
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
-// Create an interface for the Request object with a user property
-interface AuthenticatedRequest extends Request {
-    user: object;
-}
+// // Create an interface for the Request object with a user property
+// interface AuthenticatedRequest extends Request {
+//     user: object;
+// }
 export default {
-    auth(req: AuthenticatedRequest, res: Response, next: NextFunction) {
+    auth(req: Request, res: Response, next: NextFunction) {
         // Get the JWT from the request header
         const token = req.headers.authorization;
         const secret = process.env.SECRET || '';
