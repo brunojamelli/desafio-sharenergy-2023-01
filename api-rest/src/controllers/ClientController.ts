@@ -12,9 +12,10 @@ export default {
    },
 
    async update(req: Request, res: Response) {
-      const { name, email, phoneNumber, cpf } = req.body;
+      const { name, email, phoneNumber, cpf, address } = req.body;
+      const { street, city, state, zip_code } = address;
       logger.info(req.params.id);
-      const updatedClient = await Client.findByIdAndUpdate(req.params.id, { name, email, phoneNumber, cpf }, { new: true });
+      const updatedClient = await Client.findByIdAndUpdate(req.params.id, { name, email, phoneNumber, cpf,street, city, state, zip_code }, { new: true });
       logger.info(`client updated \n ${updatedClient}`)
       res.send(updatedClient);
    },
