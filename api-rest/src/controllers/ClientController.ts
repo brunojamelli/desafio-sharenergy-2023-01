@@ -4,13 +4,11 @@ import Client from "./../models/client";
 
 export default {
    async create(req: Request, res: Response) {
-      const { name, email, phoneNumber, cpf } = req.body;
-      const newClient = new Client({
-         name, email, phoneNumber, cpf
-      })
+      const { name, email, phoneNumber, cpf, address } = req.body;
+      const { street, city, state, zip_code } = address;
+      const newClient = new Client({ name, email, phoneNumber, cpf, street, city, state, zip_code });
       await newClient.save();
-      logger.info(`client saved \n ${newClient}`)
-      res.status(201).send(newClient);
+      res.send(newClient);
    },
 
    async update(req: Request, res: Response) {
