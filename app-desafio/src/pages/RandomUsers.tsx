@@ -4,10 +4,15 @@ import styled from 'styled-components'
 
 interface User {
     name: {
+        title: string;
         first: string;
         last: string;
-    };
-}
+    }
+    picture: { medium: any };
+    email: string;
+    login: { username: string };
+    dob: { age: number }
+};
 
 const RandomText = styled.div`
     display: flex;
@@ -19,20 +24,28 @@ const RandomText = styled.div`
 
 const RandomUsers: React.FunctionComponent = () => {
     const [users, setUsers] = useState<User[]>([]);
-
     useEffect(() => {
-        axios
-            .get("https://randomuser.me/api/?results=10")
-            .then(response => setUsers(response.data.results));
-    }, []);
+        axios.get('https://randomuser.me/api/?results=10')
+            .then(res => {
+                setUsers(res.data.results)
+            })
+    }, [])
     return (
-        <>
-            <h1>Random Users</h1>
-            {users.map(user => (
-                <div key={user.name.first}>{user.name.first}</div>
-            ))}
-        </>
-
+        <div>
+            {
+                users.map((user, i) => {
+                    return (
+                        <div key={i}>
+                            <h2>{`${user.name.title} ${user.name.first} ${user.name.last}`}</h2>
+                            <img src={user.picture.medium} alt={`${user.name.first} ${user.name.last}`} />
+                            <p>Email: {user.email}</p>
+                            <p>Username: {user.login.username}</p>
+                            <p>Age: {user.dob.age}</p>
+                        </div>
+                    )
+                })
+            }
+        </div>
     )
 }
 
