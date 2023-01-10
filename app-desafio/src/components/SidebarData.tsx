@@ -8,23 +8,13 @@ export const SidebarData = [
         icon: <FaIcons.FaHome />
     },
     {
-        title: 'Team',
-        path: '/team',
+        title: 'Login',
+        path: '/login',
         icon: <FaIcons.FaUsers />
     },
     {
-        title: 'Tasks',
-        path: '/tasks',
+        title: 'Random',
+        path: '/random',
         icon: <FaIcons.FaTasks />
-    },
-    {
-        title: 'Chats',
-        path: '/chats',
-        icon: <FaIcons.FaRocketchat />
-    },
-    {
-        title: 'Analytics',
-        path: '/analytics',
-        icon: <FaIcons.FaRegChartBar />
     }
 ]

@@ -11,7 +11,7 @@ const LoginText = styled.div`
 
 const Login: React.FunctionComponent = () => {
     return (
-        <LoginText>Team</LoginText>
+        <LoginText>Login</LoginText>
     )
 }
 

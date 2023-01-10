@@ -18,7 +18,14 @@ function App() {
     //   </header>
     // </div>
     <>
-        <Home />
+        <Router>
+        <Sidebar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />            
+          <Route path='/random' element={<RandomUsers />} />   
+        </Routes>
+      </Router> 
     </>
   );
 }

@@ -76,13 +76,13 @@ const Sidebar: React.FunctionComponent = () => {
     return (
         <>
             <Navbar>
-                <MenuIconOpen to="#">
+                <MenuIconOpen to="#" onClick={showSidebar}>
                     <FaIcons.FaBars />
                 </MenuIconOpen>
             </Navbar>
 
             <SidebarMenu close={close}>
-                <MenuIconClose to="#">
+                <MenuIconClose to="#" onClick={showSidebar}>
                     <FaIcons.FaTimes />
                 </MenuIconClose>
 

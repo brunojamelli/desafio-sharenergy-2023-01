@@ -11,7 +11,7 @@ const RandomText = styled.div`
 
 const RandomUsers: React.FunctionComponent = () => {
     return (
-        <RandomText>Team</RandomText>
+        <RandomText>Random Users</RandomText>
     )
 }
 
