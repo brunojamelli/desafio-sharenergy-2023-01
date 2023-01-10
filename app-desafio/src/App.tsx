@@ -5,25 +5,16 @@ import Sidebar from './components/Sidebar'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Login from './pages/Login';
-import RandomUsers from './pages/RandomUsers';
+import HttpCat from './pages/HttpCat';
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.tsx</code> and save to reload.
-    //     </p>
-    //     <p>a</p>
-    //   </header>
-    // </div>
     <>
         <Router>
         <Sidebar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />            
-          <Route path='/random' element={<RandomUsers />} />   
+          <Route path='/random' element={<HttpCat />} /> 
         </Routes>
       </Router> 
     </>

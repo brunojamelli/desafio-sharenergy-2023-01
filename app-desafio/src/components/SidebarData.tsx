@@ -16,5 +16,10 @@ export const SidebarData = [
         title: 'Random',
         path: '/random',
         icon: <FaIcons.FaTasks />
+    },
+    {
+        title: 'UserList',
+        path: '/list',
+        icon: <FaIcons.FaAdjust />
     }
 ]

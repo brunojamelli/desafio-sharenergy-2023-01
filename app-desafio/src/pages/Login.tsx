@@ -1,5 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
+import React, { useState, useEffect } from 'react';
 
 const LoginText = styled.div`
     display: flex;
