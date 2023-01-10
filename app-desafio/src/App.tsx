@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Sidebar from './components/Sidebar'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Home from './pages/Home';
+import Login from './pages/Login';
+import RandomUsers from './pages/RandomUsers';
 function App() {
   return (
     // <div className="App">
@@ -16,7 +18,7 @@ function App() {
     //   </header>
     // </div>
     <>
-        <Sidebar />
+        <Home />
     </>
   );
 }
