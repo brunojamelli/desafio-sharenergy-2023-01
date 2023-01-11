@@ -32,3 +32,25 @@ code {
   align-items: center;
   display: grid;
 }
+
+.dog-container {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dog-photo {
+  width: 50em;
+  height: 50em;
+  margin: 10em;
+  text-align: center;
+}
+
+.refresh-dog {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}

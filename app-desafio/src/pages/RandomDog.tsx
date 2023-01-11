@@ -26,12 +26,14 @@ export class RandomDog extends React.Component<{}, State> {
   render() {
     return (
       <div>
-        {this.state.imageUrl ? (
-          <img src={this.state.imageUrl} alt="Random Dog" />
-        ) : (
-          <p>Loading...</p>
-        )}
-        <button onClick={this.getRandomDog}>Refresh</button>
+        <div className="dog-container">
+          {this.state.imageUrl ? (
+            <img className="dog-photo" src={this.state.imageUrl} alt="Random Dog" />
+          ) : (
+            <p>Loading...</p>
+          )}
+          <button className="refresh-dog" onClick={this.getRandomDog}>Refresh</button>
+        </div>
       </div>
     );
   }
