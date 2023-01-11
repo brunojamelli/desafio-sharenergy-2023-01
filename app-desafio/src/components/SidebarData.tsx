@@ -13,13 +13,13 @@ export const SidebarData = [
         icon: <FaIcons.FaUsers />
     },
     {
-        title: 'Random',
-        path: '/random',
+        title: 'HttpCat',
+        path: '/cat',
         icon: <FaIcons.FaTasks />
     },
     {
-        title: 'UserList',
-        path: '/list',
+        title: 'Dog',
+        path: '/dog',
         icon: <FaIcons.FaAdjust />
     }
 ]

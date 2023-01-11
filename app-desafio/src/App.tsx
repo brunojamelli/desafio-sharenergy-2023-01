@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Login from './pages/Login';
 import HttpCat from './pages/HttpCat';
+import { RandomDog } from './pages/RandomDog';
 function App() {
   return (
     <>
@@ -14,7 +15,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />            
-          <Route path='/random' element={<HttpCat />} /> 
+          <Route path='/cat' element={<HttpCat />} /> 
+          <Route path='/dog' element={<RandomDog />} />
         </Routes>
       </Router> 
     </>
